@@ -16,8 +16,12 @@ function displayBlock(){
 		teen.innerHTML = "Soy menor de 18 años";
 	
 	$("body").append(old, teen);
-	$("h1").click(function(){
-		alert("jelou");
+	$("h1:first").click(function(){
+		alert("Eres mayor de edad");
+	});
+	
+	$("h1:eq(1)").click(function(){
+		alert("Eres menor de edad");
 	});
 	//acheUno.onclick =  mayorEdad;
 	//acheDos.onclick = menorEdad;
