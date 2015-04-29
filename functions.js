@@ -5,23 +5,27 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + "; " + expires;
 }
 
-
+//Create elements and instance events
 function displayBlock(){
 		
 	
 	$("document").ready(function(){
 		old = document.createElement("h1");
 		teen = document.createElement("h1");
-		old.innerHTML = "Soy Mayor de edad +18";
-		teen.innerHTML = "Soy menor de 18 años";
+		old.innerHTML = "I have +18";
+		teen.innerHTML = "I have -18";
 	
 	$("body").append(old, teen);
+	
+	//+18
 	$("h1:first").click(function(){
-		alert("Eres mayor de edad");
+		//window.location.assign("http://librosweb.es")
+		alert("+18");
 	});
 	
+	//-18
 	$("h1:eq(1)").click(function(){
-		alert("Eres menor de edad");
+		alert("You are a young");
 	});
 	//acheUno.onclick =  mayorEdad;
 	//acheDos.onclick = menorEdad;
@@ -29,29 +33,27 @@ function displayBlock(){
 			
 }
 
+$("document").ready( function(){
+		$("div").addClass("estilachos");
+	 }
+	); 
+
 onload = displayBlock;
 
-function menorEdad(){
+function teenAger(){
 	window.location.assign("http://librosweb.es");
 }
 
 
-function mayorEdad(){
+function adult(){
 	
 	document.write(document.cookie);
 }
 
 
-	$("document").ready( function(){
-		$("div").addClass("estilachos");
-	 }
-	); 
+	
 	 
 	
 	
 	
-	$(document).ready(function(){
-     $(document.h1).click(function(){
-       alert("hola");
-     });
-	});
+
