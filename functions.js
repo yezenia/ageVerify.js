@@ -21,6 +21,7 @@ function checkCookie() {
     if (user != "") {
         
     } else {
+		user = "pagineitor";
         displayBlock();
         if (user != "" && user != null) {
             setCookie("username", user, 365);
