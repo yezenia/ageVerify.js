@@ -19,9 +19,9 @@ function getCookie(cname) {
 function checkCookie() {
     var user = getCookie("username");
     if (user != "") {
-        alert("Welcome again " + user);
+        
     } else {
-        user = prompt("Please enter your name:", "");
+        displayBlock();
         if (user != "" && user != null) {
             setCookie("username", user, 365);
         }
@@ -43,26 +43,29 @@ function displayBlock(){
 	//+18
 	$("h1:first").click(function(){
 		checkCookie();
-		window.location.assign("index.html")
-		
 	});
 	
 	//-18
-	$("h1:eq(1)").click(function(){
-		alert("-18");
-	});
-	//acheUno.onclick =  mayorEdad;
-	//acheDos.onclick = menorEdad;
+	$("h1:eq(1)").click(funcionamiento = 
+		function(){
+		Npermission = document.createElement("p");
+		Npermission.innerHTML = "You don't have permission to be here, go study";	
+		$(".aparecer").append(Npermission);
+	}
+		
+	
+	);
+	
 	});
 			
 }
-
+//load class css
 $("document").ready( function(){
-		$("div").addClass("estilachos");
+		$("body").addClass("estilachos");
 	 }
 	); 
 
-onload = displayBlock;
+onload = checkCookie;
 
 
 
