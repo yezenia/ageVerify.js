@@ -19,7 +19,8 @@ function getCookie(cname) {
 function checkCookie() {
     var user = getCookie("username");
     if (user != "") {
-        
+		current = window.location.href;
+        window.location(current);
     } else {
 		user = "pagineitor";
         displayBlock();
@@ -47,11 +48,11 @@ function displayBlock(){
 	});
 	
 	//-18
-	$("h1:eq(1)").click(funcionamiento = 
+	$("h1:eq(1)").click( 
 		function(){
 		Npermission = document.createElement("p");
 		Npermission.innerHTML = "You don't have permission to be here, go study";	
-		$(".aparecer").append(Npermission);
+		$("body").append(Npermission);
 	}
 		
 	
