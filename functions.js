@@ -1,34 +1,3 @@
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
-}
-
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-    }
-    return "";
-}
-
-function checkCookie() {
-    var user = getCookie("username");
-    if (user != "") {
-		current = window.location.href;
-        window.location(current);
-    } else {
-		user = "pagineitor";
-        displayBlock();
-        if (user != "" && user != null) {
-            setCookie("username", user, 365);
-        }
-    }
-}
 
 //Create elements and instance events
 function displayBlock(){
@@ -44,30 +13,39 @@ function displayBlock(){
 	
 	//+18
 	$("h1:first").click(function(){
-		checkCookie();
+		$.cookie('cookie_name', 'cookie_value', { expires: 2, path: '/', domain: 'yourwebsite.com', secure: true });
+		$("body").hide("slow");
 	});
 	
 	//-18
 	$("h1:eq(1)").click( 
 		function(){
-		Npermission = document.createElement("p");
+		/*Npermission = document.createElement("p");
 		Npermission.innerHTML = "You don't have permission to be here, go study";	
-		$("body").append(Npermission);
+		$("body").append(Npermission);*/
+		window.location.href = 'http://xxxsexy.cf';
 	}
 		
-	
 	);
 	
 	});
 			
 }
+if( $("document")){
+	
+}
 //load class css
 $("document").ready( function(){
 		$("body").addClass("estilachos");
+		
 	 }
 	); 
+	
+	
 
-onload = checkCookie;
+onload = displayBlock;
+
+
 
 
 
