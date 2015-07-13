@@ -5,4 +5,4 @@ This is to add to your site without move almost nothing, is just javascript and 
 
 Age verify javascript.
 
-IN CONSTRUCTION
+Already.
